@@ -12,3 +12,4 @@ data Rank
  | Queen
  | King
  | Ace
+ deriving (Eq,Ord)
