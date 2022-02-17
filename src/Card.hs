@@ -21,3 +21,9 @@ card ['K', '♣'] = (King, Clubs)
 
 cards :: String -> [Card]
 cards = map card . words
+
+charToSuit :: Char -> Suit
+charToSuit '♥' = Hearts
+charToSuit '♠' = Spades
+charToSuit '♣' = Clubs
+charToSuit '♦' = Diamonds
