@@ -10,10 +10,10 @@ suit :: Card -> Suit
 suit = snd
 
 card :: String -> Card
-card ['J', '♥'] = (Jack, Hearts)
-card ['Q', '♥'] = (Queen, Hearts)
-card ['K', '♥'] = (King, Hearts)
-card ['A', '♥'] = (Ace, Hearts)
+card ['J', '♥'] = (Jack, charToSuit '♥')
+card ['Q', '♥'] = (Queen, charToSuit '♥')
+card ['K', '♥'] = (King, charToSuit '♥')
+card ['A', '♥'] = (Ace, charToSuit '♥')
 card ['A', '♠'] = (Ace, Spades)
 card ['A', '♦'] = (Ace, Diamonds)
 card ['A', '♣'] = (Ace, Clubs)
