@@ -14,4 +14,4 @@ card "A♥" = (Ace, Hearts)
 card "K♣" = (King, Spades)
 
 cards :: String -> [Card]
-cards s = map card (words s)
+cards = map card . words
