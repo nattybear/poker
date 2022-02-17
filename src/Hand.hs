@@ -37,3 +37,6 @@ categorize [2,2,1]     = TwoPairs
 categorize [3,1,1]     = ThreeOfAKind
 categorize [3,2]       = FullHouse
 categorize [4,1]       = FourOfAKind
+
+findCategory :: Hand -> Category
+findCategory = categorize . lengths . groups
