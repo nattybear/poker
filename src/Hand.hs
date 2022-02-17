@@ -6,6 +6,8 @@ import Data.Ord
 
 type Hand = [Card]
 
+type Ranking = (Category, [Rank])
+
 data Category
   = HighCard
   | OnePair
