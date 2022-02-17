@@ -10,10 +10,7 @@ suit :: Card -> Suit
 suit = snd
 
 card :: String -> Card
-card ['J', s] = (Jack, charToSuit s)
-card ['Q', s] = (Queen, charToSuit s)
-card ['K', s] = (King, charToSuit s)
-card ['A', s] = (Ace, charToSuit s)
+card [r, s] = (charToRank r, charToSuit s)
 
 cards :: String -> [Card]
 cards = map card . words
