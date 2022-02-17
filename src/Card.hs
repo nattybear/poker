@@ -10,6 +10,9 @@ suit :: Card -> Suit
 suit = snd
 
 card :: String -> Card
+card "J♥" = (Jack, Hearts)
+card "Q♥" = (Queen, Hearts)
+card "K♥" = (King, Hearts)
 card "A♥" = (Ace, Hearts)
 card "A♠" = (Ace, Spades)
 card "A♦" = (Ace, Diamonds)
