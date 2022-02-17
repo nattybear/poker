@@ -53,3 +53,7 @@ ranking h = (findCategory h, concat (groups h))
 
         descending :: (a -> b -> c) -> b -> a -> c
         descending = flip
+
+promote :: Ranking -> Ranking
+promote (HighCard, [Ten,Nine,Eight,Seven,Six])
+  = (Straight, [Ten,Nine,Eight,Sevn,Six])
