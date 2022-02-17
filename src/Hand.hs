@@ -4,6 +4,19 @@ import Data.Ord
 
 type Hand = [Card]
 
+data Category
+  = HighCard
+  | OnePair
+  | TwoPairs
+  | ThreeOfAKind
+  | Straight
+  | Flush
+  | FullHouse
+  | FourOfAKind
+  | StraightFlush
+  | RoyalFlush
+  deriving (Eq,Ord)
+
 lg :: [a] -> (Int, [a])
 lg xs = (length xs, xs)
 
