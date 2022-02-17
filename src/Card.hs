@@ -5,3 +5,6 @@ type Card = (Rank, Suit)
 
 rank :: Card -> Rank
 rank = fst
+
+suit :: Card -> Suit
+suit = snd
