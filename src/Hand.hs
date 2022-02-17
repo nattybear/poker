@@ -29,3 +29,11 @@ groups = sortBy (descending (comparing lg))
 
 lengths :: [[a]] -> [Int]
 lengths = map length
+
+categorize :: [Int] -> Category
+categorize [1,1,1,1,1] = HighCard
+categorize [2,1,1,1]   = OnePair
+categorize [2,2,1]     = TwoPairs
+categorize [3,1,1]     = ThreeOfAKind
+categorize [3,2]       = FullHouse
+categorize [4,1]       = FourOfAKind
