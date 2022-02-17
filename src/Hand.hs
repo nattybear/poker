@@ -26,3 +26,6 @@ descending = flip
 groups :: Hand -> [[Rank]]
 groups = sortBy (descending (comparing lg))
          . group . sort . map rank
+
+lengths :: [[a]] -> [Int]
+lengths = map length
