@@ -46,4 +46,4 @@ findCategory = categorize . lengths . groups
     lengths = map length
 
 ranking :: Hand -> Ranking
-ranking = undefined
+ranking h = (findCategory h, concat (groups h)) 
