@@ -1,3 +1,5 @@
+module Hand where
+
 import Card
 import Data.List
 import Data.Ord
