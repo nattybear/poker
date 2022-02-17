@@ -10,4 +10,4 @@ suit :: Card -> Suit
 suit = snd
 
 card :: String -> Card
-card = undefined
+card "A♥" = (Ace, Hearts)
