@@ -44,3 +44,6 @@ findCategory = categorize . lengths . groups
 
     lengths :: [[a]] -> [Int]
     lengths = map length
+
+ranking :: Hand -> Ranking
+ranking = undefined
