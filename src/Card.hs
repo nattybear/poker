@@ -11,6 +11,9 @@ suit = snd
 
 card :: String -> Card
 card "A♥" = (Ace, Hearts)
+card "A♠" = (Ace, Spades)
+card "A♦" = (Ace, Diamonds)
+card "A♣" = (Ace, Clubs)
 card "K♣" = (King, Clubs)
 
 cards :: String -> [Card]
