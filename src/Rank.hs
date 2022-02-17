@@ -1,3 +1,5 @@
+module Rank where
+
 data Rank
  = Two
  | Three
