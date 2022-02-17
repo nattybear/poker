@@ -57,3 +57,4 @@ ranking h = (findCategory h, concat (groups h))
 promote :: Ranking -> Ranking
 promote (HighCard, [Ten,Nine,Eight,Seven,Six])
   = (Straight, [Ten,Nine,Eight,Sevn,Six])
+promote r = r
