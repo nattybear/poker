@@ -12,3 +12,6 @@ suit = snd
 card :: String -> Card
 card "A♥" = (Ace, Hearts)
 card "K♣" = (King, Spades)
+
+cards :: String -> [Card]
+cards s = map card (words s)
