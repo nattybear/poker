@@ -47,3 +47,9 @@ findCategory = categorize . lengths . groups
 
 ranking :: Hand -> Ranking
 ranking h = (findCategory h, concat (groups h)) 
+
+category :: Ranking -> Category
+category = fst
+
+ranks :: Ranking -> [Rank]
+ranks = snd
