@@ -65,4 +65,7 @@ isStraight [h,_,_,_,l]
   = (fromEnum h) - (fromEnum l) == 4
 
 isFlush :: Hand -> Bool
-isFlush = undefined
+isFlush = allSame . map suit
+
+allSame :: Eq a => [a] -> Bool
+allSame = undefined
