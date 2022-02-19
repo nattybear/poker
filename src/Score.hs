@@ -20,3 +20,6 @@ winning rs = map wins rs
   where
   wins Nothing = False
   wins r       = r == maximum rs
+
+categories :: [Maybe Ranking] -> [Maybe Category]
+categories = undefined
