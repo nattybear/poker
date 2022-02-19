@@ -72,3 +72,5 @@ isFlush = allSame . map suit
 qualify :: Bool -> Ranking -> Ranking
 qualify False r = r
 qualify True (HighCard,rs) = (Flush,rs)
+qualify True (Straight,[Ace,King,Queen,Jack,Ten])
+  = (RoyalFlush,[Ace,King,Queen,Jack,Ten])
