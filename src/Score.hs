@@ -1,7 +1,9 @@
 module Score where
 
 import Card
+import Data.Char
 import Data.List
+import Data.Ord
 import Hand
 
 type Score = (Maybe Category, Bool)
@@ -36,4 +38,5 @@ showScore (Just c,False) = show c
 showScore (Nothing,_) = ""
 
 capWords :: String -> [String]
-capWords = undefined
+capWords = groupBy comp
+  where comp a x = comparing isUpper a x == GT
