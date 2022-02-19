@@ -17,7 +17,7 @@ data Category
   | FourOfAKind
   | StraightFlush
   | RoyalFlush
-  deriving (Eq,Ord)
+  deriving (Eq, Ord, Show)
 
 type Ranking = (Category, [Rank])
 
