@@ -28,7 +28,7 @@ ranks :: Ranking -> [Rank]
 ranks = snd
 
 ranking :: Hand -> Ranking
-ranking h = (findCategory h, concat (groups h)) 
+ranking h = promote (findCategory h, concat (groups h)) 
   where
     findCategory :: Hand -> Category
     findCategory = categorize . lengths . groups
