@@ -37,6 +37,11 @@ showScore (Just c,True) = show c ++ " (winner)"
 showScore (Just c,False) = show c
 showScore (Nothing,_) = ""
 
-capWords :: String -> [String]
-capWords = groupBy comp
-  where comp a x = comparing isUpper a x == GT
+
+showCategory :: Category -> String
+showCategory = unwords . capWords . show
+  where
+  capWords :: String -> [String]
+  capWords = groupBy comp
+    where
+    comp f x = comparing isUpper f x == GT
