@@ -27,3 +27,7 @@ categories = undefined
 maybeCategory :: Maybe Ranking -> Maybe Category
 maybeCategory Nothing = Nothing
 maybeCategory (Just r) = Just (category r)
+
+maybeRanks :: Maybe Ranking -> Maybe [Rank]
+maybeRanks Nothing = Nothing
+maybeRanks (Just r) = Just (ranks r)
