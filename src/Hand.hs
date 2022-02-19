@@ -63,3 +63,6 @@ promote r = r
 isStraight :: [Rank] -> Bool
 isStraight [h,_,_,_,l]
   = (fromEnum h) - (fromEnum l) == 4
+
+isFlush :: Hand -> Bool
+isFlush = undefined
