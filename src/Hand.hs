@@ -68,3 +68,6 @@ isFlush :: Hand -> Bool
 isFlush = allSame . map suit
   where allSame :: Eq a => [a] -> Bool
         allSame = (==1) . length . group
+
+qualify :: Bool -> Ranking -> Ranking
+qualify = undefined
