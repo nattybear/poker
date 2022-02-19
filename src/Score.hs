@@ -22,7 +22,7 @@ winning rs = map wins rs
   wins r       = r == maximum rs
 
 categories :: [Maybe Ranking] -> [Maybe Category]
-categories = undefined
+categories = map (fmap category)
 
 maybeCategory :: Maybe Ranking -> Maybe Category
 maybeCategory Nothing = Nothing
