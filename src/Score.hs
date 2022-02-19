@@ -14,3 +14,9 @@ findRanking :: [Card] -> Maybe Ranking
 findRanking cs
   | length cs /= 7 = Nothing
   | otherwise = Just (bestRanking cs)
+
+winning :: Ord a => [Maybe a] -> [Bool]
+winning rs = map wins rs
+  where
+  wins Nothing = False
+  wins r       = r == maximum rs
