@@ -4,6 +4,8 @@ import Card
 import Data.List
 import Hand
 
+type Score = (Maybe Category, Bool)
+
 choose :: Int -> [a] -> [[a]]
 choose n = filter ((==n) . length) . subsequences
 
