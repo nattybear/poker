@@ -45,3 +45,8 @@ showCategory = unwords . capWords . show
   capWords = groupBy comp
     where
     comp f x = comparing isUpper f x == GT
+
+showScore :: Score -> String
+showScore (Just c,True) = showCategory c ++ " (winner)"
+showScore (Just c,False) = showCategory c
+showScore (Nothing,_) = ""
