@@ -31,3 +31,7 @@ maybeCategory (Just r) = Just (category r)
 maybeRanks :: Maybe Ranking -> Maybe [Rank]
 maybeRanks Nothing = Nothing
 maybeRanks (Just r) = Just (ranks r)
+
+maybeMap :: (a -> b) -> Maybe a -> Maybe b
+maybeMap _ Nothing = Nothing
+maybeMap f (Just x) = Just (f x)
