@@ -29,3 +29,8 @@ categories = map (fmap category)
 scores :: [[Card]] -> [(Maybe Category,Bool)]
 scores sd = zip (categories rs) (winning rs)
   where rs = map findRanking sd
+
+showScore :: Score -> String
+showScore (Just c,True) = show c ++ " (winner)"
+showScore (Just c,False) = show c
+showScore (Nothing,_) = ""
