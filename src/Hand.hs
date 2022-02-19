@@ -55,11 +55,6 @@ ranking h = (findCategory h, concat (groups h))
         descending = flip
 
 promote :: Ranking -> Ranking
-promote (HighCard,[Ace,Five,_,_,_])
-  = (Straight,[Five,Four,Three,Two,Ace])
-promote (HighCard, rs) | isStraight rs = (Straight, rs)
+promote (HighCard, [Ten,Nine,Eight,Seven,Six])
+  = (Straight, [Ten,Nine,Eight,Sevn,Six])
 promote r = r
-
-isStraight :: [Rank] -> Bool
-isStraight [h,_,_,_,l]
-  = (fromEnum h) - (fromEnum l) == 4
