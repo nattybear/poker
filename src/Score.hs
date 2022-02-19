@@ -52,3 +52,5 @@ showDown s sc = s ++ ' ' : showScore sc
 showDowns :: [String] -> [String]
 showDowns ls = zipWith showDown ls sc
   where sc = scores (map cards ls)
+
+main = interact (unlines . showDowns . lines)
