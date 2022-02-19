@@ -76,5 +76,4 @@ qualify True (HighCard,rs) = (Flush,rs)
 qualify True (Straight,Ace:rs) = (RoyalFlush,Ace:rs)
 
 isStrictlyOrdered :: Ord a => [a] -> Bool
-isStrictlyOrdered l = and (map lt (zip l (tail l)))
-  where lt = uncurry (<)
+isStrictlyOrdered l = and (zipWith (<) l (tail l))
