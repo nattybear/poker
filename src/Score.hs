@@ -23,3 +23,7 @@ winning rs = map wins rs
 
 categories :: [Maybe Ranking] -> [Maybe Category]
 categories = undefined
+
+maybeCategory :: Maybe Ranking -> Maybe Category
+maybeCategory Nothing = Nothing
+maybeCategory (Just r) = Just (category r)
