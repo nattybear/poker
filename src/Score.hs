@@ -32,12 +32,6 @@ scores :: [[Card]] -> [(Maybe Category,Bool)]
 scores sd = zip (categories rs) (winning rs)
   where rs = map findRanking sd
 
-showScore :: Score -> String
-showScore (Just c,True) = show c ++ " (winner)"
-showScore (Just c,False) = show c
-showScore (Nothing,_) = ""
-
-
 showCategory :: Category -> String
 showCategory = unwords . capWords . show
   where
@@ -50,3 +44,7 @@ showScore :: Score -> String
 showScore (Just c,True) = showCategory c ++ " (winner)"
 showScore (Just c,False) = showCategory c
 showScore (Nothing,_) = ""
+
+showDown :: String -> Score -> String
+showDown s (Nothing,False) = s
+showDown s sc = s ++ ' ' : showScore sc
