@@ -34,3 +34,6 @@ showScore :: Score -> String
 showScore (Just c,True) = show c ++ " (winner)"
 showScore (Just c,False) = show c
 showScore (Nothing,_) = ""
+
+capWords :: String -> [String]
+capWords = undefined
