@@ -19,7 +19,7 @@ data Rank
  | Queen
  | King
  | Ace
- deriving (Eq,Ord)
+ deriving (Eq,Ord,Enum)
 
 rank :: Card -> Rank
 rank = fst
