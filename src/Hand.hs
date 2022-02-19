@@ -70,4 +70,4 @@ isFlush = allSame . map suit
         allSame = (==1) . length . group
 
 qualify :: Bool -> Ranking -> Ranking
-qualify = undefined
+qualify False r = r
