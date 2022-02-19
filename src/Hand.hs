@@ -66,6 +66,5 @@ isStraight [h,_,_,_,l]
 
 isFlush :: Hand -> Bool
 isFlush = allSame . map suit
-
-allSame :: Eq a => [a] -> Bool
-allSame = undefined
+  where allSame :: Eq a => [a] -> Bool
+        allSame xs = length (group xs) == 1
